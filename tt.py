@@ -21,7 +21,7 @@ def search_word_in_pdf(pdf_path, word):
     return False
 
 def solve(folder_path, words):
-    folder_path = os.path.join(folder_path, 'how')
+    folder_path = os.path.join(folder_path, os.listdir(folder_path)[0])
     pdfs_paths = os.listdir(folder_path)
     for file_name in pdfs_paths:
         base_folder = os.path.join(folder_path, '..')
